@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cof4c3u14l120"]
+
+[ext_resource type="Script" path="res://FavoriteSubject.gd" id="1_lgyp7"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_lejgi"]
+
+[node name="FavoriteSubject" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgyp7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 95.0
+offset_right = 1015.0
+offset_bottom = 300.0
+theme = ExtResource("2_lejgi")
+text = "My Favorite Subject"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

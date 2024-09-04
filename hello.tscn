@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bytge4bmn84br"]
+
+[ext_resource type="Script" path="res://hello.gd" id="1_nl20g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxxqw"]
+font_size = 48
+outline_color = Color(0.259294, 0.259294, 0.259294, 1)
+
+[sub_resource type="Theme" id="Theme_232hf"]
+default_font_size = 48
+
+[sub_resource type="Theme" id="Theme_l4jsn"]
+default_font_size = 48
+
+[node name="Hello" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nl20g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 42.0
+offset_right = 1060.0
+offset_bottom = 375.0
+text = "Hi"
+label_settings = SubResource("LabelSettings_oxxqw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 498.0
+offset_right = 278.0
+offset_bottom = 592.0
+theme = SubResource("Theme_232hf")
+text = "Show"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 499.0
+offset_right = 1094.0
+offset_bottom = 593.0
+theme = SubResource("Theme_l4jsn")
+text = "Clear"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

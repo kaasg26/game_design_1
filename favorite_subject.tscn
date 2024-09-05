@@ -25,5 +25,31 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 110.0
+offset_top = 476.0
+offset_right = 350.0
+offset_bottom = 581.0
+theme = ExtResource("2_lejgi")
+text = "Show"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 476.0
+offset_right = 706.0
+offset_bottom = 581.0
+theme = ExtResource("2_lejgi")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 476.0
+offset_right = 1062.0
+offset_bottom = 581.0
+theme = ExtResource("2_lejgi")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

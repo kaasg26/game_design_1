@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfstsxycv1320"]
+
+[ext_resource type="Script" path="res://prog_52a.gd" id="1_8onq6"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_xwrxy"]
+
+[node name="Prog_52a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8onq6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 58.0
+offset_right = 389.0
+offset_bottom = 125.0
+theme = ExtResource("2_xwrxy")
+text = "Length:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 152.0
+offset_right = 380.0
+offset_bottom = 219.0
+theme = ExtResource("2_xwrxy")
+text = "Width:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblArea" type="Label" parent="."]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 262.0
+offset_right = 663.0
+offset_bottom = 316.0
+theme = ExtResource("2_xwrxy")
+text = "Area:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblPerim" type="Label" parent="."]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 377.0
+offset_right = 555.0
+offset_bottom = 444.0
+theme = ExtResource("2_xwrxy")
+text = "Perimeter:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="txtLen" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 60.0
+offset_right = 675.0
+offset_bottom = 121.0
+
+[node name="txtWid" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 153.0
+offset_right = 676.0
+offset_bottom = 215.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 47.0
+offset_right = 1009.0
+offset_bottom = 180.0
+theme = ExtResource("2_xwrxy")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 213.0
+offset_right = 1024.0
+offset_bottom = 346.0
+theme = ExtResource("2_xwrxy")
+text = "Erase"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 384.0
+offset_right = 1026.0
+offset_bottom = 517.0
+theme = ExtResource("2_xwrxy")
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://oudto1fe6xwp"]
+
+[ext_resource type="Script" path="res://prog_54c.gd" id="1_onvh4"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_m74kw"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="3_xtts2"]
+
+[node name="prog_54c" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onvh4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 50.0
+offset_right = 375.0
+offset_bottom = 98.0
+theme = ExtResource("2_m74kw")
+text = "Radius:"
+
+[node name="lblarea" type="Label" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 216.0
+offset_right = 1051.0
+offset_bottom = 364.0
+theme = ExtResource("3_xtts2")
+text = "A:"
+vertical_alignment = 1
+
+[node name="lblcerc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 378.0
+offset_right = 1055.0
+offset_bottom = 526.0
+theme = ExtResource("3_xtts2")
+text = "C:"
+vertical_alignment = 1
+
+[node name="txt1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 109.0
+offset_right = 402.0
+offset_bottom = 212.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 51.0
+offset_right = 716.0
+offset_bottom = 217.0
+theme = ExtResource("3_xtts2")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 49.0
+offset_right = 994.0
+offset_bottom = 215.0
+theme = ExtResource("3_xtts2")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1012.0
+offset_top = 49.0
+offset_right = 1098.0
+offset_bottom = 215.0
+theme = ExtResource("2_m74kw")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

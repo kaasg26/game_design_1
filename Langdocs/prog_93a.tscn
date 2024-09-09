@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr6g56pvul7ay"]
+
+[ext_resource type="Script" path="res://prog_93a.gd" id="1_om6fa"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_fppt7"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="3_iivvs"]
+
+[node name="prog_93a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_om6fa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 41.0
+offset_right = 328.0
+offset_bottom = 127.0
+theme = ExtResource("2_fppt7")
+text = "KiloWatts Used: "
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 408.0
+offset_right = 698.0
+offset_bottom = 500.0
+theme = ExtResource("2_fppt7")
+text = "Total Cost: "
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 507.0
+offset_right = 701.0
+offset_bottom = 599.0
+theme = ExtResource("2_fppt7")
+text = "After 5/20: "
+
+[node name="lblBR" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 159.0
+offset_right = 447.0
+offset_bottom = 228.0
+theme = ExtResource("3_iivvs")
+text = "Base Rate: "
+
+[node name="lblSC" type="Label" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 226.0
+offset_right = 444.0
+offset_bottom = 295.0
+theme = ExtResource("3_iivvs")
+text = "Surcharge: "
+
+[node name="lblTax" type="Label" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 293.0
+offset_right = 450.0
+offset_bottom = 362.0
+theme = ExtResource("3_iivvs")
+text = "Tax: "
+
+[node name="txtKW" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 28.0
+offset_right = 1056.0
+offset_bottom = 118.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 138.0
+offset_right = 1054.0
+offset_bottom = 209.0
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 231.0
+offset_right = 1055.0
+offset_bottom = 302.0
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 328.0
+offset_right = 1056.0
+offset_bottom = 399.0
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

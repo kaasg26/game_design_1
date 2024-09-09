@@ -4,7 +4,7 @@ extends Control
 
 
 func _on_button_pressed() -> void:
-	var r = int($txt1.text)
+	var r = float($txt1.text)
 	var pi = 3.14159
 	var area = pi * r ** 2
 	var cer = 2 * pi * r

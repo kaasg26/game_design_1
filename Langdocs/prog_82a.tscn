@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://1m58hngn48cn"]
+
+[ext_resource type="Script" path="res://prog_82a.gd" id="1_da2cx"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_mlsyn"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="3_v32en"]
+
+[node name="prog_82a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_da2cx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 60.0
+offset_right = 531.0
+offset_bottom = 150.0
+theme = ExtResource("2_mlsyn")
+text = "Speed limit: "
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 179.0
+offset_right = 493.0
+offset_bottom = 269.0
+theme = ExtResource("2_mlsyn")
+text = "Vehicle speed: "
+
+[node name="lblFine" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 400.0
+offset_right = 607.0
+offset_bottom = 504.0
+theme = ExtResource("3_v32en")
+text = "Fine:"
+
+[node name="txtlimit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 59.0
+offset_right = 603.0
+offset_bottom = 145.0
+
+[node name="txtspeed" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 170.0
+offset_right = 601.0
+offset_bottom = 256.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 55.0
+offset_right = 1054.0
+offset_bottom = 184.0
+theme = ExtResource("3_v32en")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 236.0
+offset_right = 1056.0
+offset_bottom = 365.0
+theme = ExtResource("3_v32en")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 421.0
+offset_right = 1060.0
+offset_bottom = 550.0
+theme = ExtResource("3_v32en")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -24,7 +24,7 @@ offset_bottom = 127.0
 theme = ExtResource("2_fppt7")
 text = "KiloWatts Used: "
 
-[node name="Label5" type="Label" parent="."]
+[node name="TotalCost" type="Label" parent="."]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 408.0
@@ -33,7 +33,7 @@ offset_bottom = 500.0
 theme = ExtResource("2_fppt7")
 text = "Total Cost: "
 
-[node name="Label6" type="Label" parent="."]
+[node name="AfterMay" type="Label" parent="."]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 507.0
@@ -101,3 +101,5 @@ offset_bottom = 399.0
 text = "Quit"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3pbefyocxxvs"]
+
+[ext_resource type="Script" path="res://prog_88a.gd" id="1_wsa2n"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_7myvh"]
+
+[node name="prog_88a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wsa2n")
+
+[node name="txtNum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 29.0
+offset_right = 333.0
+offset_bottom = 112.0
+theme = ExtResource("2_7myvh")
+placeholder_text = "0"
+
+[node name="txtNum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 29.0
+offset_right = 668.0
+offset_bottom = 112.0
+theme = ExtResource("2_7myvh")
+placeholder_text = "0"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 35.0
+offset_right = 1095.0
+offset_bottom = 136.0
+theme = ExtResource("2_7myvh")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 166.0
+offset_right = 1097.0
+offset_bottom = 267.0
+theme = ExtResource("2_7myvh")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 299.0
+offset_right = 1097.0
+offset_bottom = 400.0
+theme = ExtResource("2_7myvh")
+text = "Quit"
+
+[node name="lblOne" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 140.0
+offset_right = 825.0
+offset_bottom = 615.0
+theme = ExtResource("2_7myvh")
+script = ExtResource("1_wsa2n")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -5,11 +5,11 @@ extends Control
 
 func _on_button_pressed() -> void:
 	var KiloW = float($txtKW.text) / 100
-	var BRate = KiloW * 4.75
-	var SurCh = BRate * 0.10
-	var Tax = BRate * 0.03
+	var BRate = snapped(KiloW * 4.75, 0.01)
+	var SurCh = snapped(BRate * 0.10,0.01)
+	var Tax = snapped(BRate * 0.03, 0.01)
 	var Total = BRate + SurCh + Tax 
-	var Late = Total * 1.04
+	var Late = snapped(Total * 1.04, 0.01)
 	
 	$lblBR.text = "Base Rate: $" + str(BRate)
 	$lblSC.text = "Surcharge: $" + str(SurCh)

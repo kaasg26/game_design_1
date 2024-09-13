@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://jldoocwb8omr"]
+
+[ext_resource type="Script" path="res://lp_4_1.gd" id="1_mc7jx"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_1syhp"]
+
+[node name="LP4-1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mc7jx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 15.0
+offset_right = 606.0
+offset_bottom = 112.0
+theme = ExtResource("2_1syhp")
+text = "Enter number of copies to be Printed:"
+vertical_alignment = 1
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 178.0
+offset_right = 1081.0
+offset_bottom = 378.0
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 501.0
+offset_right = 390.0
+offset_bottom = 600.0
+theme = ExtResource("2_1syhp")
+text = "Caclulate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 503.0
+offset_right = 730.0
+offset_bottom = 602.0
+theme = ExtResource("2_1syhp")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 500.0
+offset_right = 1072.0
+offset_bottom = 599.0
+theme = ExtResource("2_1syhp")
+text = "Exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 25.0
+offset_right = 1021.0
+offset_bottom = 111.0
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

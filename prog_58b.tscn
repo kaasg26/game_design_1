@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnwy518ott6cq"]
+
+[ext_resource type="Script" path="res://prog_58b.gd" id="1_jclcl"]
+[ext_resource type="Theme" uid="uid://bwmn4gkem7yt7" path="res://75px.tres" id="2_o3olp"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="3_beic7"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="4_2oe2m"]
+
+[node name="prog_58b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jclcl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 25.0
+offset_right = 853.0
+offset_bottom = 165.0
+theme = ExtResource("2_o3olp")
+text = "A x ^2  +  B x  +  C  =  0"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 162.0
+offset_right = 236.0
+offset_bottom = 245.0
+theme = ExtResource("3_beic7")
+text = "A = "
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 251.0
+offset_right = 234.0
+offset_bottom = 334.0
+theme = ExtResource("3_beic7")
+text = "B = "
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 334.0
+offset_right = 238.0
+offset_bottom = 417.0
+theme = ExtResource("3_beic7")
+text = "C = "
+
+[node name="lblRoots" type="Label" parent="."]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 458.0
+offset_right = 789.0
+offset_bottom = 541.0
+theme = ExtResource("3_beic7")
+text = "Roots = "
+
+[node name="txtA" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 167.0
+offset_right = 743.0
+offset_bottom = 237.0
+theme = ExtResource("4_2oe2m")
+
+[node name="txtB" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 248.0
+offset_right = 743.0
+offset_bottom = 318.0
+theme = ExtResource("4_2oe2m")
+
+[node name="txtC" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 334.0
+offset_right = 743.0
+offset_bottom = 404.0
+theme = ExtResource("4_2oe2m")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 164.0
+offset_right = 1066.0
+offset_bottom = 274.0
+theme = ExtResource("3_beic7")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 302.0
+offset_right = 1068.0
+offset_bottom = 412.0
+theme = ExtResource("3_beic7")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 436.0
+offset_right = 1070.0
+offset_bottom = 546.0
+theme = ExtResource("3_beic7")
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

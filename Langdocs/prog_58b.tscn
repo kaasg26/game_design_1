@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuf80lyhfbdco"]
+
+[ext_resource type="Script" path="res://prog_115a.gd" id="1_o7vvy"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_wye06"]
+
+[node name="prog_115a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o7vvy")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 1145.0
+offset_bottom = 437.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 465.0
+offset_right = 309.0
+offset_bottom = 596.0
+theme = ExtResource("2_wye06")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 465.0
+offset_right = 616.0
+offset_bottom = 596.0
+theme = ExtResource("2_wye06")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 621.0
+offset_top = 465.0
+offset_right = 923.0
+offset_bottom = 596.0
+theme = ExtResource("2_wye06")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

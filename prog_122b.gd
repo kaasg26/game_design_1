@@ -2,14 +2,14 @@ extends Control
 
 
 
+
 func _on_button_pressed() -> void:
-	$ItemList.add_item("Number")
-	for num in range (2,36+1):
-		var line = str(num)
+	$ItemList.add_item("Number  Money")
+	for num in range(1, 41):
+		var money = num * 4 #pow(num, 2)
+		var line = "%d       %.2f" % [num,     money]
 		$ItemList.add_item(line)
-#range(stop)
-#range(start,stop)
-#range(start,stop,step)
+
 
 func _on_button_2_pressed() -> void:
 	$ItemList.clear()

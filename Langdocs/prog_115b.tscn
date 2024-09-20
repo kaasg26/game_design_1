@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://yoxc2a8j3sbt"]
+
+[ext_resource type="Script" path="res://prog_115b.gd" id="1_qduko"]
+
+[node name="prog_115b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qduko")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 817.0
+offset_bottom = 645.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 47.0
+offset_right = 1118.0
+offset_bottom = 136.0
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 247.0
+offset_right = 1118.0
+offset_bottom = 336.0
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 447.0
+offset_right = 1118.0
+offset_bottom = 536.0
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

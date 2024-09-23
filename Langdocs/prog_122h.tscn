@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://da2medpehmuin"]
+[gd_scene load_steps=3 format=3 uid="uid://da2medpehmuin"]
 
 [ext_resource type="Script" path="res://prog_122h.gd" id="1_4mqcd"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_biubu"]
 
 [node name="prog_122h" type="Control"]
 layout_mode = 3
@@ -10,3 +11,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4mqcd")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 836.0
+offset_bottom = 644.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 70.0
+offset_right = 1126.0
+offset_bottom = 168.0
+theme = ExtResource("2_biubu")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 270.0
+offset_right = 1126.0
+offset_bottom = 368.0
+theme = ExtResource("2_biubu")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 470.0
+offset_right = 1126.0
+offset_bottom = 568.0
+theme = ExtResource("2_biubu")
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

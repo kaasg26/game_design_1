@@ -4,7 +4,6 @@ extends Control
 func _on_button_pressed() -> void:
 	$ItemList.add_item("x    x^2    sqrt(x)    x^3    sqrt(x, 1/4)    ")
 	for num in range(1, 21):
-		
 		var Sqr2 = num ** 2
 		var SqT2 = sqrt(num)
 		var Sqr3 = num ** 3

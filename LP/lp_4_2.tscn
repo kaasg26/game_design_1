@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds7f26yi83u4u"]
+
+[ext_resource type="Script" path="res://lp_4_2.gd" id="1_ny5qi"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_y6o4f"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="3_cixj4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wgbh4"]
+font_size = 40
+font_color = Color(0.960784, 0.960784, 0.101961, 1)
+
+[node name="Lp_4_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ny5qi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 15.0
+offset_right = 606.0
+offset_bottom = 428.0
+theme = ExtResource("2_y6o4f")
+text = "Enter Package Weight in Kilograms:
+
+Enter Package Length in Centimeters:
+
+Enter Package Width in Centimeters:
+
+Enter Package Height in Centimeters:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lblOut" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 387.0
+offset_right = 613.0
+offset_bottom = 492.0
+theme = ExtResource("3_cixj4")
+label_settings = SubResource("LabelSettings_wgbh4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnCalc" type="Button" parent="."]
+offset_left = 73.0
+offset_top = 515.0
+offset_right = 390.0
+offset_bottom = 600.0
+theme = ExtResource("2_y6o4f")
+text = "Caclulate"
+
+[node name="btnClear" type="Button" parent="."]
+offset_left = 413.0
+offset_top = 517.0
+offset_right = 730.0
+offset_bottom = 602.0
+theme = ExtResource("2_y6o4f")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 755.0
+offset_top = 517.0
+offset_right = 1072.0
+offset_bottom = 599.0
+theme = ExtResource("2_y6o4f")
+text = "Exit"
+
+[node name="txtWeight" type="LineEdit" parent="."]
+offset_left = 659.0
+offset_top = 42.0
+offset_right = 1061.0
+offset_bottom = 128.0
+
+[node name="txtLength" type="LineEdit" parent="."]
+offset_left = 659.0
+offset_top = 142.0
+offset_right = 1061.0
+offset_bottom = 228.0
+
+[node name="txtWidth" type="LineEdit" parent="."]
+offset_left = 659.0
+offset_top = 242.0
+offset_right = 1061.0
+offset_bottom = 328.0
+
+[node name="txtHeight" type="LineEdit" parent="."]
+offset_left = 659.0
+offset_top = 342.0
+offset_right = 1061.0
+offset_bottom = 428.0
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

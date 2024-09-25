@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c282axxj7j7is"]
+[gd_scene load_steps=4 format=3 uid="uid://c282axxj7j7is"]
 
 [ext_resource type="Script" path="res://lp_4_3.gd" id="1_kunu7"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_u5tp1"]
+[ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="3_35urw"]
 
 [node name="Lp_4_3" type="Control"]
 layout_mode = 3
@@ -10,3 +12,98 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kunu7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 38.0
+offset_right = 276.0
+offset_bottom = 133.0
+theme = ExtResource("2_u5tp1")
+text = "#Dozen:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 40.0
+offset_right = 836.0
+offset_bottom = 135.0
+theme = ExtResource("2_u5tp1")
+text = "#Extra:"
+
+[node name="txtDoz" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 42.0
+offset_right = 549.0
+offset_bottom = 121.0
+
+[node name="txtExt" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 42.0
+offset_right = 1089.0
+offset_bottom = 121.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 160.0
+offset_right = 574.0
+offset_bottom = 445.0
+theme = ExtResource("3_35urw")
+text = "0 -> 3 = $0.50 per Dozen
+4 -> 5 = $0.45 per Dozen
+6 -> 10 = $0.40 per Dozen
+11 or Greater = $0.35 per Dozen
+
+Extra = 1/12 of Dozen Price"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 160.0
+offset_right = 1060.0
+offset_bottom = 243.0
+theme = ExtResource("2_u5tp1")
+text = "Amount Owed:"
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 254.0
+offset_right = 1082.0
+offset_bottom = 431.0
+theme = ExtResource("2_u5tp1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 526.0
+offset_right = 336.0
+offset_bottom = 608.0
+theme = ExtResource("3_35urw")
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 526.0
+offset_right = 726.0
+offset_bottom = 608.0
+theme = ExtResource("3_35urw")
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 526.0
+offset_right = 1116.0
+offset_bottom = 608.0
+theme = ExtResource("3_35urw")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

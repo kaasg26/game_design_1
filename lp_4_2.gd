@@ -22,10 +22,10 @@ func _on_btn_calc_pressed() -> void:
 
 func _on_btn_clear_pressed() -> void:
 	$lblOut.text = ""
-	$LineEdit.text = "" 
-	$LineEdit2.text = ""
-	$LineEdit3.text = ""
-	$LineEdit4.text = ""
+	$txtWeight.clear()
+	$txtHeight.clear()
+	$txtWidth.clear()
+	$txtLength.clear()
 
 
 func _on_btn_exit_pressed() -> void:

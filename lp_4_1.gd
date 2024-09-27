@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_btn_calc_pressed() -> void:
-	var copies = int(LineEdit.text)
+	var copies = int($LineEdit.text)
 	var price = 0.0 #price per copy
 	var tcost = 0.0 #total cost
 	if copies > 0 and copies <= 99:
@@ -21,12 +21,13 @@ func _on_btn_calc_pressed() -> void:
 		return
 	tcost = price * copies
 	$lblOut.text = "Price per copy: $" + str(price) + \
-				"\nTotal Cost: $%.2f" % str(tcost)
+				"\nTotal Cost: $%.2f" % tcost
 
 
 func _on_btn_clear_pressed() -> void:
-	pass # Replace with function body.
+	$lblOut.text = ""
+	$LineEdit.clear()
 
 
 func _on_btn_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

@@ -4,8 +4,9 @@ extends Control
 
 
 func _on_button_pressed() -> void:
-	var Dozen = int($txtDoz.text)
-	var Extra = int($txtExt.text)
+	var Eggs = int($txtDoz.text)
+	var Dozens = floor(Eggs / 12)
+	var remainder = Eggs % 12
 
 
 func _on_button_2_pressed() -> void:

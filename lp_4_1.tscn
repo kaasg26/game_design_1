@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://jldoocwb8omr"]
+[gd_scene load_steps=4 format=3 uid="uid://jldoocwb8omr"]
 
 [ext_resource type="Script" path="res://lp_4_1.gd" id="1_mc7jx"]
 [ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="2_1syhp"]
+[ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="3_xsprv"]
 
 [node name="LP4-1" type="Control"]
 layout_mode = 3
@@ -28,6 +29,7 @@ offset_left = 71.0
 offset_top = 178.0
 offset_right = 1081.0
 offset_bottom = 378.0
+theme = ExtResource("3_xsprv")
 
 [node name="btnCalc" type="Button" parent="."]
 layout_mode = 0

@@ -20,30 +20,14 @@ offset_top = 38.0
 offset_right = 276.0
 offset_bottom = 133.0
 theme = ExtResource("2_u5tp1")
-text = "#Dozen:"
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 606.0
-offset_top = 40.0
-offset_right = 836.0
-offset_bottom = 135.0
-theme = ExtResource("2_u5tp1")
-text = "#Extra:"
+text = "Number of Eggs:"
 
 [node name="txtDoz" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 260.0
-offset_top = 42.0
-offset_right = 549.0
-offset_bottom = 121.0
-
-[node name="txtExt" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 800.0
-offset_top = 42.0
-offset_right = 1089.0
-offset_bottom = 121.0
+offset_left = 488.0
+offset_top = 38.0
+offset_right = 905.0
+offset_bottom = 117.0
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0

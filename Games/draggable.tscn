@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bumdk8rdfjeip"]
+
+[ext_resource type="Script" path="res://Games/draggable.gd" id="1_kpqtd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2t0e7"]
+size = Vector2(140, 136)
+
+[node name="Draggable" type="Node2D"]
+position = Vector2(81, -62)
+script = ExtResource("1_kpqtd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-80, 62)
+shape = SubResource("RectangleShape2D_2t0e7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -147.0
+offset_top = -6.0
+offset_right = -7.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 140.0
+offset_bottom = 134.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]

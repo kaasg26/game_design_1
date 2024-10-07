@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cof4c3u14l120"]
 
-[ext_resource type="Script" path="res://FavoriteSubject.gd" id="1_lgyp7"]
+[ext_resource type="Script" path="res://Aboutcd/FavoriteSubject.gd" id="1_lgyp7"]
 [ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_lejgi"]
 
 [node name="FavoriteSubject" type="Control"]

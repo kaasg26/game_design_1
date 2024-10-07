@@ -21,5 +21,20 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	update_animation(direction)
+	
+
 
 	move_and_slide()
+	
+	
+@onready var anim = $AnimatedSprite2D
+func update_animation(direction):
+	if not self.is_on_floor(): #Jumping
+		anim.play("Jump")
+	elif direction != 0: #walking
+		anim.play("Walk")
+		anim.flip_h = direction < 0 #flip sprite when moving left
+	else: #idle
+		anim.play("default")

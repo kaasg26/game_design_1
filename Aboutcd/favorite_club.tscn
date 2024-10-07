@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://be6o2vo8vr5a6"]
 
-[ext_resource type="Script" path="res://favorite_club.gd" id="1_jl7g5"]
+[ext_resource type="Script" path="res://Aboutcd/favorite_club.gd" id="1_jl7g5"]
 [ext_resource type="LabelSettings" uid="uid://b4n0sdwu437u6" path="res://Label48.tres" id="2_3t42c"]
 [ext_resource type="Theme" uid="uid://cu6rrjy4bj6v6" path="res://48px.tres" id="2_8gohr"]
 

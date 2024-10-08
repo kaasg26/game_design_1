@@ -3,11 +3,12 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var gravity_on = true
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and gravity_on:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
@@ -24,6 +25,28 @@ func _physics_process(delta: float) -> void:
 	
 	update_animation(direction)
 	
+	if Input.is_action_just_pressed("ui_cancel"): #escape
+		gravity_on = not gravity_on
+	if Input.is_action_just_pressed("ui_home"):
+		self.scale *= 2
+	if Input.is_action_just_pressed("ui_end"):
+		self.scale /= 2
+	if Input.is_action_just_pressed("ui_page_up"):
+		self.rotation_degrees += 5
+	if Input.is_action_just_pressed("ui_page_down"):
+		self.rotation_degrees -= 5
+	if Input.is_action_just_pressed("ui_text_completion_replace"):
+		self.position.x += 500 #tab
+	if Input.is_action_just_pressed("ui_text_backspace"):
+		self.position.x -= 500
+	if Input.is_action_just_pressed("ui_text_toggle_insert_mode"):
+		self.position.y += JUMP_VELOCITY / 2.0
+	if Input.is_action_just_pressed("ui_text_delete"):
+		self.position.y -= JUMP_VELOCITY * 2.0
+	if Input.is_action_just_pressed("zoom cam in"):
+		$Camera2D.zoom += Vector2(1,1)
+	if Input.is_action_just_pressed("zoom cam out"):
+		$Camera2D.zoom -= Vector2(1,1)
 
 
 	move_and_slide()

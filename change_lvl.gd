@@ -9,4 +9,4 @@ func _on_body_entered(body: Node2D) -> void:
 			OS.alert("No next level")
 		else:
 			var level = "res://" + next_level + ".tscn"
-			get_tree().change_scene_to_file(lvl)
+			get_tree().change_scene_to_file(level)

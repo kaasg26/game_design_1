@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://beho3jlbtrq41"]
+[gd_scene load_steps=6 format=3 uid="uid://beho3jlbtrq41"]
 
 [ext_resource type="Script" path="res://plt_world_1.gd" id="1_8waiv"]
 [ext_resource type="PackedScene" uid="uid://cspi4c85xlxkr" path="res://Games/plt_player.tscn" id="2_t2ljh"]
+[ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="3_uvut6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8lpa"]
 size = Vector2(166, 14)
@@ -33,3 +34,6 @@ shape = SubResource("RectangleShape2D_v8lpa")
 position = Vector2(-0.499986, 0.750004)
 scale = Vector2(165, 14.5)
 texture = SubResource("PlaceholderTexture2D_bqptn")
+
+[node name="change_lvl" parent="." instance=ExtResource("3_uvut6")]
+position = Vector2(3467, 267)

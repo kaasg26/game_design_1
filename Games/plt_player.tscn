@@ -80,7 +80,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="plt_player" type="CharacterBody2D"]
+[node name="plt_player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(1, -2)
 script = ExtResource("1_bigyw")
 

@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	pass
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 
 
 func _on_resume_pressed() -> void:

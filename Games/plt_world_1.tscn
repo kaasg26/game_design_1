@@ -37,3 +37,4 @@ texture = SubResource("PlaceholderTexture2D_bqptn")
 
 [node name="change_lvl" parent="." instance=ExtResource("3_uvut6")]
 position = Vector2(3467, 267)
+next_level = "plt_World_2"

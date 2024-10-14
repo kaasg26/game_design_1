@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://drda2x5jroomr"]
+[gd_scene load_steps=7 format=4 uid="uid://drda2x5jroomr"]
 
 [ext_resource type="Texture2D" uid="uid://oxj0ei2jcxni" path="res://Assets/Sprites/phase-2.png" id="1_273x0"]
 [ext_resource type="Script" path="res://Games/plt_world_2-2.gd" id="1_uuoj0"]
 [ext_resource type="PackedScene" uid="uid://cspi4c85xlxkr" path="res://Games/plt_player.tscn" id="3_sl7r6"]
+[ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="4_wgn4p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xgo3"]
 texture = ExtResource("1_273x0")
@@ -1167,3 +1168,7 @@ tile_map_data = PackedByteArray("AAAUABwAAAACAA0AAAAUAB0AAAACAA4AAAAUAB4AAAACAAM
 tile_set = SubResource("TileSet_eedlo")
 
 [node name="plt_player" parent="." instance=ExtResource("3_sl7r6")]
+
+[node name="change_lvl" parent="." instance=ExtResource("4_wgn4p")]
+position = Vector2(1832, 349)
+next_level = "Games/plt_world_3"

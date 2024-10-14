@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://150qi1hmjxq7"]
+
+[ext_resource type="Script" path="res://change_lvl_2.gd" id="1_ntqio"]
+
+[node name="change_lvl-2" type="Area2D"]
+script = ExtResource("1_ntqio")

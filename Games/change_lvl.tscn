@@ -9,7 +9,6 @@ size = Vector2(38, 71)
 
 [node name="change_lvl" type="Area2D"]
 script = ExtResource("1_1dn77")
-next_level = "plt_world_2-2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lxp81")

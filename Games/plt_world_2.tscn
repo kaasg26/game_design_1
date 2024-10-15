@@ -1158,6 +1158,7 @@ texture = ExtResource("1_273x0")
 
 [sub_resource type="TileSet" id="TileSet_eedlo"]
 physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_5xgo3")
 
 [node name="plt_World2" type="Node2D"]

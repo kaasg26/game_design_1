@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://c3r2mxqqbpx77" path="res://30px.tres" id="4_q26wx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2anm"]
-size = Vector2(1391, 90)
+size = Vector2(1746, 90)
 
 [sub_resource type="ImageTexture" id="ImageTexture_sh1hu"]
 
@@ -19,7 +19,7 @@ script = ExtResource("1_cq528")
 position = Vector2(129, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(419.5, 563)
+position = Vector2(597, 563)
 shape = SubResource("RectangleShape2D_s2anm")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
@@ -28,8 +28,8 @@ scale = Vector2(171, 104)
 texture = SubResource("ImageTexture_sh1hu")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1151.0
-offset_bottom = 543.0
+offset_right = 1142.0
+offset_bottom = 408.0
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -39,24 +39,45 @@ offset_right = 327.0
 offset_bottom = 124.0
 theme = ExtResource("3_a2qso")
 text = "Gravity:"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00175131
+anchor_top = 0.0147059
+anchor_right = 0.00175131
+anchor_bottom = 0.0147059
 offset_left = 20.0
 offset_top = 251.0
 offset_right = 455.0
 offset_bottom = 317.0
-theme = ExtResource("3_a2qso")
+theme = ExtResource("4_q26wx")
 text = "Insertia:"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00175131
+anchor_top = -0.0343137
+anchor_right = -0.00175131
+anchor_bottom = -0.0343137
 offset_left = 18.0
 offset_top = 339.0
 offset_right = 453.0
 offset_bottom = 406.0
-theme = ExtResource("3_a2qso")
+theme = ExtResource("4_q26wx")
 text = "Velocity (x,y):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel"]
+offset_left = 9.0
+offset_top = 190.0
+offset_right = 379.0
+offset_bottom = 257.0
+theme = ExtResource("4_q26wx")
+text = "Acceleration:"
 
 [node name="GravSlider" type="HSlider" parent="Panel"]
 layout_mode = 0
@@ -64,45 +85,89 @@ offset_left = 258.0
 offset_top = 85.0
 offset_right = 1066.0
 offset_bottom = 101.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.612084
+anchor_top = -0.0171569
+anchor_right = 0.612084
+anchor_bottom = -0.0171569
 offset_left = 40.0
 offset_top = 157.0
 offset_right = 351.0
 offset_bottom = 212.0
 theme = ExtResource("4_q26wx")
 text = "Apply Force"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.612084
+anchor_top = -0.468137
+anchor_right = 0.612084
+anchor_bottom = -0.468137
 offset_left = 44.0
 offset_top = 442.0
 offset_right = 355.0
 offset_bottom = 497.0
 theme = ExtResource("4_q26wx")
 text = "Apply Adjustments"
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.025394
+anchor_top = 0.0269608
+anchor_right = -0.025394
+anchor_bottom = -0.0367647
 offset_left = 267.0
 offset_top = 249.0
-offset_right = 1005.0
+offset_right = 682.0
 offset_bottom = 323.0
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0709282
+anchor_top = -0.00980392
+anchor_right = -0.0709282
+anchor_bottom = -0.0980392
 offset_left = 344.0
 offset_top = 343.0
-offset_right = 626.0
+offset_right = 500.0
 offset_bottom = 417.0
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit3" type="LineEdit" parent="Panel"]
-layout_mode = 0
-offset_left = 654.0
-offset_top = 343.0
-offset_right = 936.0
-offset_bottom = 417.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0323993
+anchor_top = 0.00490196
+anchor_right = -0.0262697
+anchor_bottom = -0.0906863
+offset_left = 519.0
+offset_top = 345.0
+offset_right = 669.0
+offset_bottom = 419.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit4" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.202372
+anchor_top = -0.809112
+anchor_right = -0.249657
+anchor_bottom = -0.88019
+offset_left = 507.109
+offset_top = 520.118
+offset_right = 922.109
+offset_bottom = 594.118
+metadata/_edit_use_anchors_ = true
 
 [connection signal="value_changed" from="Panel/GravSlider" to="." method="_on_grav_slider_value_changed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

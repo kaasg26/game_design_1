@@ -16,7 +16,8 @@ func _input(event: InputEvent) -> void:
 		add_child(nball)
 		
 
-
+func _physics_process(delta: float) -> void:
+	print(delta)
 
 func _on_grav_slider_value_changed(value: float) -> void:
 	for child in get_children():
@@ -35,6 +36,7 @@ func _on_button_2_pressed() -> void:
 	var v_x = float($Panel/LineEdit2.text)
 	var v_y = float($Panel/LineEdit3.text)
 	var velocity = Vector2(v_x,v_y)
+	var acceler = 
 	for child in get_children():
 		if child is RigidBody2D:
 			child.inertia = v_inertia

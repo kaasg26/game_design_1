@@ -36,8 +36,9 @@ func _on_button_2_pressed() -> void:
 	var v_x = float($Panel/LineEdit2.text)
 	var v_y = float($Panel/LineEdit3.text)
 	var velocity = Vector2(v_x,v_y)
-	var acceler = 
+	var acceler = Vector2(velocity, v_inertia)
 	for child in get_children():
 		if child is RigidBody2D:
 			child.inertia = v_inertia
 			child.linear_velocity = velocity
+			child.acceleration = acceler

@@ -1,9 +1,10 @@
-[gd_scene load_steps=55 format=3 uid="uid://bka3dc0a7o3c0"]
+[gd_scene load_steps=56 format=3 uid="uid://bka3dc0a7o3c0"]
 
 [ext_resource type="Script" path="res://td_player.gd" id="1_lqhyj"]
 [ext_resource type="Texture2D" uid="uid://dombfu7gkafeh" path="res://Assets/Sprites/Zelda_like/character.png" id="2_l6omp"]
 [ext_resource type="PackedScene" uid="uid://db0hosmfsgxnb" path="res://pause_menu.tscn" id="3_7bto8"]
 [ext_resource type="Script" path="res://collision_shape_2d.gd" id="4_u077n"]
+[ext_resource type="PackedScene" uid="uid://bjwvol6ms0y2m" path="res://Games/Zelda_like/player_hud.tscn" id="5_68vy8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jp7d7"]
 atlas = ExtResource("2_l6omp")
@@ -413,7 +414,7 @@ animations = [{
 radius = 8.0
 height = 20.0
 
-[node name="td_player" type="CharacterBody2D"]
+[node name="td_player" type="CharacterBody2D" groups=["PlayerZ"]]
 script = ExtResource("1_lqhyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -431,6 +432,9 @@ offset_top = -62.0
 offset_right = 124.0
 offset_bottom = 66.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["PlayerZ"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_y0cmh")
 script = ExtResource("4_u077n")
+
+[node name="PlayerHUD" parent="." instance=ExtResource("5_68vy8")]
+visible = false

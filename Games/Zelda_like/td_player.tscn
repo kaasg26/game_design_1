@@ -86,22 +86,6 @@ region = Rect2(64, 128, 32, 32)
 atlas = ExtResource("2_l6omp")
 region = Rect2(96, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u2xun"]
-atlas = ExtResource("2_l6omp")
-region = Rect2(0, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjlkt"]
-atlas = ExtResource("2_l6omp")
-region = Rect2(32, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p6qhv"]
-atlas = ExtResource("2_l6omp")
-region = Rect2(64, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xkfdt"]
-atlas = ExtResource("2_l6omp")
-region = Rect2(96, 192, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_13rbb"]
 atlas = ExtResource("2_l6omp")
 region = Rect2(0, 224, 32, 32)
@@ -117,6 +101,22 @@ region = Rect2(64, 224, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_kuscx"]
 atlas = ExtResource("2_l6omp")
 region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2xun"]
+atlas = ExtResource("2_l6omp")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjlkt"]
+atlas = ExtResource("2_l6omp")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6qhv"]
+atlas = ExtResource("2_l6omp")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkfdt"]
+atlas = ExtResource("2_l6omp")
+region = Rect2(96, 192, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpcqi"]
 atlas = ExtResource("2_l6omp")
@@ -292,23 +292,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u2xun")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fjlkt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p6qhv")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_xkfdt")
-}],
-"loop": false,
-"name": &"swipe_left",
-"speed": 16.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_13rbb")
 }, {
 "duration": 1.0,
@@ -319,6 +302,23 @@ animations = [{
 }, {
 "duration": 3.0,
 "texture": SubResource("AtlasTexture_kuscx")
+}],
+"loop": false,
+"name": &"swipe_left",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2xun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjlkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6qhv")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_xkfdt")
 }],
 "loop": false,
 "name": &"swipe_right",
@@ -419,7 +419,7 @@ script = ExtResource("1_lqhyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1eb57")
-animation = &"idle_down"
+animation = &"swipe_left"
 autoplay = "idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]

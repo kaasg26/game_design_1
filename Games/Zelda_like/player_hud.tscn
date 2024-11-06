@@ -9,8 +9,8 @@ script = ExtResource("1_81u56")
 [node name="PlayerHealth" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 590.0
-offset_bottom = 218.0
+offset_right = 1149.0
+offset_bottom = 646.0
 
 [node name="Hearts" type="Sprite2D" parent="PlayerHealth"]
 position = Vector2(40, 40)
@@ -19,3 +19,11 @@ texture = ExtResource("2_l871p")
 hframes = 33
 vframes = 20
 frame = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerHealth"]
+position = Vector2(40, 600)
+scale = Vector2(5, 5)
+texture = ExtResource("2_l871p")
+hframes = 33
+vframes = 20
+frame = 132

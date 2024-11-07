@@ -88,7 +88,7 @@ func _physics_process(delta: float) -> void:
 			look_direction = direction
 			#Scale to 1 to prevent speed boost from diagonals
 			direction = direction.normalized()
-			self.velocity = direction * SPEED
+			velocity = direction * SPEED
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 		velocity += inertia
@@ -131,5 +131,4 @@ func update_animation(direction):
 		$AnimatedSprite2D.animation = a_name
 		$AnimatedSprite2D.play()
 		
-	
-	
+	pass

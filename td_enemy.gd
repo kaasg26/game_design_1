@@ -1,25 +1,36 @@
 extends CharacterBody2D
 
+const SPEED = 60.0
+var MAX_HEALTH = 30.0
+var HEALTH = MAX_HEALTH
+var DAMAGE = 10.0
+var AI_STATE = STATES.IDLE
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+enum STATE { IDLE=0, UP, DOWN, LEFT, RIGHT, 
+			 UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT, DAMAGED }
 
+var state_directions = [
+	Vector2.ZERO,
+	Vector2.UP,
+	Vector2.DOWN,
+	Vector2.LEFT,
+	Vector2.RIGHT,
+	Vector2(-1, -1).normalized(), #UL
+	Vector2(1, -1).normalized(), #UR
+	Vector2(-1, 1).normalized(), #DL
+	Vector2(1, 1).normalized(), #DR
+	Vector2.ZERO,
+]
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+var state_animations = [
+	"",
+	"walk_up",
+	"walk_down",
+	"walk_left",
+	"walk_right",
+	"walk_left",
+	"walk_right",
+	"walk_left",
+	"walk_right",
+	"",
+]

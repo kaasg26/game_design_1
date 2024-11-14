@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d0glisv5vkrqe"]
 
 [ext_resource type="Script" path="res://entities/items/mini_coin.gd" id="1_cc7gc"]
-[ext_resource type="Texture2D" uid="uid://wiykxdusuttn" path="res://assets/sprites/zelda_like/objects.png" id="1_v0xjp"]
+[ext_resource type="Texture2D" uid="uid://wiykxdusuttn" path="res://Assets/Sprites/Zelda_like/objects.png" id="1_v0xjp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhblu"]
 atlas = ExtResource("1_v0xjp")

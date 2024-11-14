@@ -5,6 +5,7 @@ const SPEED = 100.0
 const MAXIMUM_OBTAINABLE_HEALTH = 400.0
 enum STATES { IDLE=0, DEAD, DAMAGED, ATTACKING, CHARGING }
 
+
 @export var data = {
 	"max_health": 60.0,
 	"health": 60.0,
@@ -22,8 +23,14 @@ var charge_time = 2.5
 var charge_start_time = 0.0
 
 var slash_scene = preload("res://Assets/slash.tscn")
+var damage_shader = preload("res://Assets/Shaders/take_damage.tres")
+var attack_sound = preload("res://Assets/Audio/slash.wav")
+#TODO: Add and preload sounds (death, hurt, coin, heart, charge_att)
+#aud_player.stream = Whatever_sound
+#aud_player.play()
 
 @onready var p_HUD = get_tree(). get_first_node_in_group("HUD")
+@onready var aud_player = $AudioStreamPlayer2D
 
 func get_direction_name():
 	return["right", "down", "left", "up"][
@@ -41,6 +48,8 @@ func attack():
 	slash.position = attack_direction * 20
 	slash.rotation = Vector2().angle_to_point(-attack_direction)
 	add_child(slash)
+	aud_player.stream = attack_sound 
+	aud_player.play()
 	animation_lock = 0.2
 
 func charged_attack():
@@ -80,7 +89,8 @@ func take_damage(dmg):
 		data.state = STATES.DAMAGED
 		damage_lock = 0.5
 		animation_lock = dmg * 0.005
-		# TODO: Damage shader
+		$AnimatedSprite2D.material = damage_shader.duplicate()
+		$AnimatedSprite2D.material.set_shader_parameter("intensity", 0.5)
 		if data.health > 0:
 			# TODO: play damage sound
 			pass
@@ -96,8 +106,8 @@ func _physics_process(delta: float) -> void:
 	damage_lock = max(damage_lock-delta, 0.0)
 	
 	if animation_lock == 0 and data.state != STATES.DEAD:
-		if data.state != STATES.CHARGING:
-			data.state = STATES.IDLE
+		if data.state == STATES.DAMAGED and damage_lock <= 0:
+			$AnimatedSprite2D.material = null;
 	
 		var direction = Vector2(
 			Input.get_axis("ui_left", "ui_right"),

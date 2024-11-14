@@ -50,10 +50,14 @@ signal recovered
 @onready var rcM = $RayCast2DM
 @onready var rcL = $RayCast2DL
 @onready var anim_player = $AnimatedSprite2D
+@onready var aud_player = $AudioStreamPlayer2D
 
 var drops = ["drop_coin", "drop_heart"]
 var heart_scene = preload("res://Games/Zelda_like/mini_heart.tscn")
 var coin_scene = preload("res://Entities/Items/mini_coin.tscn")
+var damage_shader = preload("res://Assets/Shaders/take_damage.tres")
+var death_sound = preload("res://Assets/Audio/monsterdeath.wav")
+
 
 func vec2_offset():
 	return Vector2(randf_range(-10.0, 10.0), randf_range(-10.0, 10.0))
@@ -99,13 +103,15 @@ func take_damage(dmg, attacker=null):
 		HEALTH -= dmg
 		damage_lock = 0.2
 		animation_lock = 0.2
+		
 		var dmg_intensity = clamp(1.0-((HEALTH+0.01)/MAX_HEALTH), 0.1, 0.8)
 		$AnimatedSprite2D.material = damage_shader.duplicate()
 		$AnimatedSprite2D.material.set_shader_parameter("intensity", dmg_intensity)
-		
 		if HEALTH <= 0:
 			drop_items()
-			#TODO play death sound
+			aud_player.stream = death_sound
+			aud_player.play()
+			await aud_player 
 			queue_free()
 		else:
 			if attacker != null:

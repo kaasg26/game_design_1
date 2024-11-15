@@ -21,7 +21,7 @@ func _init(default_value: int = 1):
 
 func _process(delta: float) -> void:
 	for player in get_tree().get_nodes_in_group("PlayerZ"):
-		if $Area2d.overlaps_body(player):
+		if $Area2D.overlaps_body(player):
 			interact(player)
 	current_time += delta
 	if current_time >= flicker_start_time and current_time <= time_to_despawn:

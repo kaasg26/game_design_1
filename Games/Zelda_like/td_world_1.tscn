@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://crohjatlp4gsy"]
+[gd_scene load_steps=12 format=4 uid="uid://crohjatlp4gsy"]
 
 [ext_resource type="Script" path="res://td_world_1.gd" id="1_7pfky"]
 [ext_resource type="Texture2D" uid="uid://c61ip052cqci2" path="res://Assets/Sprites/Zelda_like/Overworld.png" id="2_rxpyb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bka3dc0a7o3c0" path="res://Games/Zelda_like/td_player.tscn" id="3_penyj"]
 [ext_resource type="PackedScene" uid="uid://1b6h6d5vba6" path="res://Games/Zelda_like/mini_heart.tscn" id="4_8ylj3"]
 [ext_resource type="PackedScene" uid="uid://66m0q21h8c0h" path="res://Entities/td_enemy.tscn" id="4_pm3mq"]
+[ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="7_21uw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgwvo"]
 texture = ExtResource("2_rxpyb")
@@ -2157,7 +2158,7 @@ tile_set = SubResource("TileSet_7qvi6")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
-tile_map_data = PackedByteArray("AAAHAAMAAAAWAAkAAAAHAAQAAAAWAAoAAAAHAAUAAAAWAAsAAAAIAAMAAAAXAAkAAAAIAAQAAAAXAAoAAAAIAAUAAAAXAAsAAAAJAAMAAAAYAAkAAAAJAAQAAAAYAAoAAAAJAAUAAAAYAAsAAAA=")
+tile_map_data = PackedByteArray("AAAHAAMAAAAWAAkAAAAHAAQAAAAWAAoAAAAHAAUAAAAWAAsAAAAIAAMAAAAXAAkAAAAIAAQAAAAXAAoAAAAIAAUAAAAXAAsAAAAJAAMAAAAYAAkAAAAJAAQAAAAYAAoAAAAJAAUAAAAYAAsAAAD///P/AAAKAB8AAAD///T/AAAKACAAAAD///X/AAAKACEAAAAAAPP/AAALAB8AAAAAAPT/AAALACAAAAAAAPX/AAALACEAAAABAPP/AAAMAB8AAAABAPT/AAAMACAAAAABAPX/AAAMACEAAAACAPP/AAANAB8AAAACAPT/AAANACAAAAACAPX/AAANACEAAAA=")
 tile_set = SubResource("TileSet_sswg8")
 
 [node name="mini_coin" parent="." instance=ExtResource("3_mtvrw")]
@@ -2177,3 +2178,15 @@ position = Vector2(-138, 79)
 position = Vector2(-111, -95)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="change_lvl" parent="." instance=ExtResource("7_21uw0")]
+position = Vector2(16, -196)
+next_level = "td_world_2"
+
+[node name="CollisionShape2D" parent="change_lvl" index="0"]
+position = Vector2(-0.5, 16.5)
+
+[node name="Sprite2D" parent="change_lvl" index="1"]
+visible = false
+
+[editable path="change_lvl"]

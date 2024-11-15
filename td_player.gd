@@ -30,7 +30,7 @@ var attack_sound = preload("res://Assets/Audio/slash.wav")
 #aud_player.play()
 
 @onready var p_HUD = get_tree(). get_first_node_in_group("HUD")
-@onready var aud_player = $AudioStreamPlayer2D
+@onready var aud_player = $AudioStreamPlayer
 
 func get_direction_name():
 	return["right", "down", "left", "up"][

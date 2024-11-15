@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://change_lvl.gd" id="1_1dn77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxp81"]
-size = Vector2(38, 71)
+size = Vector2(43, 39)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qjq1l"]
 

@@ -50,7 +50,7 @@ signal recovered
 @onready var rcM = $RayCast2DM
 @onready var rcL = $RayCast2DL
 @onready var anim_player = $AnimatedSprite2D
-@onready var aud_player = $AudioStreamPlayer2D
+@onready var aud_player = $AudioStreamPlayer
 
 var drops = ["drop_coin", "drop_heart"]
 var heart_scene = preload("res://Games/Zelda_like/mini_heart.tscn")
@@ -111,7 +111,7 @@ func take_damage(dmg, attacker=null):
 			drop_items()
 			aud_player.stream = death_sound
 			aud_player.play()
-			await aud_player 
+			await aud_player.finished
 			queue_free()
 		else:
 			if attacker != null:

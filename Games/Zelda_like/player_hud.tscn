@@ -20,16 +20,22 @@ hframes = 33
 vframes = 20
 frame = 8
 
-[node name="Money" type="Sprite2D" parent="PlayerHealth"]
+[node name="Money" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Coins" type="Label" parent="Money"]
+offset_left = 77.0
+offset_top = 577.0
+offset_right = 334.0
+offset_bottom = 624.0
+
+[node name="Icon" type="Sprite2D" parent="Money"]
 position = Vector2(40, 600)
 scale = Vector2(5, 5)
 texture = ExtResource("2_l871p")
 hframes = 33
 vframes = 20
 frame = 132
-
-[node name="Coins" type="Label" parent="PlayerHealth"]
-offset_left = 77.0
-offset_top = 577.0
-offset_right = 334.0
-offset_bottom = 624.0

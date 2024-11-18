@@ -17,7 +17,7 @@ func create_heart():
 func draw_hearts():
 	for heart in hearts.get_children():
 		hearts.remove_child(heart)
-	for i in range(int(player.data.max_health) / 20):
+	for i in range(int(player.data.max_health) / 20.0):
 		create_heart() # 1 heart per 20hp
 		
 	
@@ -44,7 +44,7 @@ func _process(_delta: float) -> void:
 		if index > full_hearts:
 			heart.frame = 8
 		elif index == full_hearts:
-			heart.frame = 8 - int(remainder / 5)
+			heart.frame = 8.0 - int(remainder / 5.0)
 		elif index < full_hearts:
 			heart.frame = 4
 	pass

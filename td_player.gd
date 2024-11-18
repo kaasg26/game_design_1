@@ -45,7 +45,7 @@ func attack():
 	$AnimatedSprite2D.play("swipe_" + dir_name)
 	attack_direction = look_direction
 	var slash = slash_scene.instantiate()
-	slash.position = attack_direction * 20
+	slash.position = attack_direction * 20.0
 	slash.rotation = Vector2().angle_to_point(-attack_direction)
 	add_child(slash)
 	aud_player.stream = attack_sound 
@@ -106,7 +106,7 @@ func _physics_process(delta: float) -> void:
 	damage_lock = max(damage_lock-delta, 0.0)
 	
 	if animation_lock == 0 and data.state != STATES.DEAD:
-		if data.state == STATES.DAMAGED and damage_lock <= 0:
+		if data.state == STATES.DAMAGED and  max(damage_lock-delta, 0.0):
 			$AnimatedSprite2D.material = null;
 	
 		var direction = Vector2(

@@ -53,8 +53,8 @@ signal recovered
 @onready var aud_player = $AudioStreamPlayer
 
 var drops = ["drop_coin", "drop_heart"]
-var heart_scene = preload("res://Games/Zelda_like/mini_heart.tscn")
 var coin_scene = preload("res://Entities/Items/mini_coin.tscn")
+var heart_scene = preload("res://Games/Zelda_like/mini_heart.tscn")
 var damage_shader = preload("res://Assets/Shaders/take_damage.tres")
 var death_sound = preload("res://Assets/Audio/monsterdeath.wav")
 
@@ -139,7 +139,7 @@ func _physics_process(delta: float) -> void:
 			if $AttackBox.overlaps_body(player):
 				if player.damage_lock == 0.0:
 					var inert = abs(player.global_position-self.global_position)
-					player.inertia = (inert.normalized() * Vector2(1,1)) * knockback
+					player.inertia = inert.normalized() * knockback
 					player.take_damage(DAMAGE)
 				else:
 					continue

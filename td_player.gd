@@ -132,13 +132,20 @@ func _physics_process(delta: float) -> void:
 			data.state = STATES.CHARGING
 		
 		charge_start_time += delta
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_released("ui_accept"):
 			if charge_start_time >= charge_time and \
 			data.state == STATES.CHARGING:
 				charged_attack()
 			else:
 				data.state = STATES.IDLE
 	
+	if Input.is_action_just_pressed("ui_select"):
+		for entity in get_tree().get_nodes_in_group("Interactable"):
+			if entity.in_range(self):
+				entity.interact(self)
+				data.state = STATES.IDLE
+				return
+				
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		$Camera2D/pause_menu.show()

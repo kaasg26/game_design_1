@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://crohjatlp4gsy"]
+[gd_scene load_steps=13 format=4 uid="uid://crohjatlp4gsy"]
 
 [ext_resource type="Script" path="res://td_world_1.gd" id="1_7pfky"]
 [ext_resource type="Texture2D" uid="uid://c61ip052cqci2" path="res://Assets/Sprites/Zelda_like/Overworld.png" id="2_rxpyb"]
 [ext_resource type="PackedScene" uid="uid://d0glisv5vkrqe" path="res://Entities/Items/mini_coin.tscn" id="3_mtvrw"]
 [ext_resource type="PackedScene" uid="uid://bka3dc0a7o3c0" path="res://Games/Zelda_like/td_player.tscn" id="3_penyj"]
-[ext_resource type="PackedScene" uid="uid://1b6h6d5vba6" path="res://Games/Zelda_like/mini_heart.tscn" id="4_8ylj3"]
+[ext_resource type="PackedScene" uid="uid://1b6h6d5vba6" path="res://Entities/Items/mini_heart.tscn" id="4_8ylj3"]
 [ext_resource type="PackedScene" uid="uid://66m0q21h8c0h" path="res://Entities/td_enemy.tscn" id="4_pm3mq"]
 [ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="7_21uw0"]
+[ext_resource type="PackedScene" uid="uid://brpxct8qqdon3" path="res://Entities/Objects/SmallChest.tscn" id="7_arql5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgwvo"]
 texture = ExtResource("2_rxpyb")
@@ -2178,6 +2179,9 @@ position = Vector2(-138, 79)
 position = Vector2(-111, -95)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="SmallChest" parent="." instance=ExtResource("7_arql5")]
+position = Vector2(-59, -30)
 
 [node name="change_lvl" parent="." instance=ExtResource("7_21uw0")]
 position = Vector2(16, -196)

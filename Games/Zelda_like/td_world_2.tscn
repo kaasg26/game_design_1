@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cgxlb67relh22"]
+[gd_scene load_steps=7 format=4 uid="uid://cgxlb67relh22"]
 
 [ext_resource type="Texture2D" uid="uid://c61ip052cqci2" path="res://Assets/Sprites/Zelda_like/Overworld.png" id="1_vjyst"]
 [ext_resource type="PackedScene" uid="uid://bka3dc0a7o3c0" path="res://Games/Zelda_like/td_player.tscn" id="2_qh154"]
 [ext_resource type="PackedScene" uid="uid://66m0q21h8c0h" path="res://Entities/td_enemy.tscn" id="3_bwfq3"]
+[ext_resource type="PackedScene" uid="uid://brpxct8qqdon3" path="res://Entities/Objects/SmallChest.tscn" id="4_wi7gn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkbkr"]
 texture = ExtResource("1_vjyst")
@@ -1103,3 +1104,12 @@ position = Vector2(640, 464)
 
 [node name="td_enemy4" parent="." instance=ExtResource("3_bwfq3")]
 position = Vector2(856, 215)
+
+[node name="SmallChest" parent="." instance=ExtResource("4_wi7gn")]
+position = Vector2(202, 239)
+
+[node name="SmallChest2" parent="." instance=ExtResource("4_wi7gn")]
+position = Vector2(870, 395)
+
+[node name="SmallChest3" parent="." instance=ExtResource("4_wi7gn")]
+position = Vector2(747, 140)

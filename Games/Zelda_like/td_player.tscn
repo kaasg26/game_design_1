@@ -1,6 +1,6 @@
 [gd_scene load_steps=56 format=3 uid="uid://bka3dc0a7o3c0"]
 
-[ext_resource type="Script" path="res://td_player.gd" id="1_lqhyj"]
+[ext_resource type="Script" path="res://Games/Zelda_like/td_player.gd" id="1_lqhyj"]
 [ext_resource type="Texture2D" uid="uid://dombfu7gkafeh" path="res://Assets/Sprites/Zelda_like/character.png" id="2_l6omp"]
 [ext_resource type="PackedScene" uid="uid://db0hosmfsgxnb" path="res://pause_menu.tscn" id="3_7bto8"]
 [ext_resource type="Script" path="res://collision_shape_2d.gd" id="4_u077n"]

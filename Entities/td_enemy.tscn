@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://66m0q21h8c0h"]
 
-[ext_resource type="Script" path="res://td_enemy.gd" id="1_0h83m"]
+[ext_resource type="Script" path="res://Entities/td_enemy.gd" id="1_0h83m"]
 [ext_resource type="Texture2D" uid="uid://4pbay5ay0laq" path="res://Assets/Sprites/Zelda_like/log.png" id="2_jm4ys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axw1h"]

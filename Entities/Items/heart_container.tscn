@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg6ou5lkxljmr"]
+
+[ext_resource type="Script" path="res://Entities/Items/heart_container.gd" id="1_n0i6o"]
+[ext_resource type="Texture2D" uid="uid://wiykxdusuttn" path="res://Assets/Sprites/Zelda_like/objects.png" id="2_iv1aq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e1etc"]
+
+[node name="HeartContainer" type="Node2D"]
+script = ExtResource("1_n0i6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_iv1aq")
+hframes = 33
+vframes = 20
+frame = 99
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_e1etc")

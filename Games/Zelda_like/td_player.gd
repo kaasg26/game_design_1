@@ -81,6 +81,11 @@ func pickup_health(value):
 func pickup_money(value):
 	data.money += value
 
+func pickup_heartcontainer(value):
+	data.max_health += 20.0
+	data.health += value
+	data.health = clamp(data.health, 0, data.max_health)
+
 signal health_depleted
 
 func take_damage(dmg):

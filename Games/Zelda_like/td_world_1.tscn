@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://crohjatlp4gsy"]
+[gd_scene load_steps=14 format=4 uid="uid://crohjatlp4gsy"]
 
 [ext_resource type="Script" path="res://td_world_1.gd" id="1_7pfky"]
 [ext_resource type="Texture2D" uid="uid://c61ip052cqci2" path="res://Assets/Sprites/Zelda_like/Overworld.png" id="2_rxpyb"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://66m0q21h8c0h" path="res://Entities/td_enemy.tscn" id="4_pm3mq"]
 [ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="7_21uw0"]
 [ext_resource type="PackedScene" uid="uid://brpxct8qqdon3" path="res://Entities/Objects/SmallChest.tscn" id="7_arql5"]
+[ext_resource type="PackedScene" uid="uid://cg6ou5lkxljmr" path="res://Entities/Items/heart_container.tscn" id="9_1pstk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgwvo"]
 texture = ExtResource("2_rxpyb")
@@ -2192,5 +2193,8 @@ position = Vector2(-0.5, 16.5)
 
 [node name="Sprite2D" parent="change_lvl" index="1"]
 visible = false
+
+[node name="HeartContainer" parent="." instance=ExtResource("9_1pstk")]
+position = Vector2(-60, 55)
 
 [editable path="change_lvl"]

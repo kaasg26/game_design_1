@@ -56,7 +56,7 @@ var drops = ["drop_coin", "drop_heart"]
 var coin_scene = preload("res://entities/items/mini_coin.tscn")
 var heart_scene = preload("res://entities/items/mini_heart.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
-var death_sound = preload("res://assets/sounds/monsterdeath.wav")
+var death_sound = preload("res://assets/sounds/death.wav")
 
 func vec2_offset():
 	return Vector2(randf_range(-10.0, 10.0), randf_range(-10.0, 10.0))

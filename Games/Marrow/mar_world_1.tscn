@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://byodthbnl8okt"]
+
+[ext_resource type="Script" path="res://Games/Marrow/mar_world_1.gd" id="1_xgpnc"]
+
+[node name="MarWorld1" type="Node2D"]
+script = ExtResource("1_xgpnc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]

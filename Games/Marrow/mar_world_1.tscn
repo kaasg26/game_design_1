@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://byodthbnl8okt"]
+[gd_scene load_steps=10 format=4 uid="uid://byodthbnl8okt"]
 
 [ext_resource type="Script" path="res://Games/Marrow/mar_world_1.gd" id="1_xgpnc"]
 [ext_resource type="Texture2D" uid="uid://clpiao610wpuf" path="res://Assets/Sprites/Marrow/Background tiles.png" id="2_iag5o"]
 [ext_resource type="Texture2D" uid="uid://devbkhbqyg5q" path="res://Assets/Sprites/Marrow/Floor tiles.png" id="3_en2ni"]
 [ext_resource type="PackedScene" uid="uid://dryo3vcib3gfj" path="res://Games/change_lvl.tscn" id="4_6y6si"]
+[ext_resource type="PackedScene" uid="uid://b3ih4hc7gvavy" path="res://Games/Marrow/mar_player.tscn" id="5_25b5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fojru"]
 texture = ExtResource("2_iag5o")
@@ -355,3 +356,6 @@ tile_set = SubResource("TileSet_gvreh")
 [node name="change_lvl" parent="." instance=ExtResource("4_6y6si")]
 position = Vector2(2874, 296)
 next_level = "mar_world_2"
+
+[node name="mar_player" parent="." instance=ExtResource("5_25b5y")]
+position = Vector2(64, 276)

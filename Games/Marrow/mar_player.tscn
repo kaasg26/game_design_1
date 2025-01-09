@@ -1,6 +1,110 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3ih4hc7gvavy"]
+[gd_scene load_steps=16 format=3 uid="uid://b3ih4hc7gvavy"]
 
 [ext_resource type="Script" path="res://mar_player.gd" id="1_ew2t8"]
+[ext_resource type="Texture2D" uid="uid://dbfntgmvvqgom" path="res://Assets/Sprites/Marrow/MainGuySpriteSheet.png" id="2_uq4y4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oixoq"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 0, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n02ui"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(41, 0, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u8jm"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(82, 0, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hum2c"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 36, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua7y7"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(41, 36, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6ei2"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(82, 36, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btca2"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 72, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjo1l"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(41, 72, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ag0"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(82, 72, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dttbu"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 108, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cc6a"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(41, 108, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwvwc"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(82, 108, 41, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdw88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oixoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n02ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u8jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hum2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua7y7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6ei2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btca2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjo1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0ag0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dttbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cc6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwvwc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="mar_player" type="Node2D"]
 script = ExtResource("1_ew2t8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jdw88")
+animation = &"new_animation"
+
+[node name="Camera2D" type="Camera2D" parent="."]

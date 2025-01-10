@@ -1,7 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3ih4hc7gvavy"]
+[gd_scene load_steps=20 format=3 uid="uid://b3ih4hc7gvavy"]
 
 [ext_resource type="Script" path="res://mar_player.gd" id="1_ew2t8"]
 [ext_resource type="Texture2D" uid="uid://dbfntgmvvqgom" path="res://Assets/Sprites/Marrow/MainGuySpriteSheet.png" id="2_uq4y4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmh42"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 36, 41, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oixoq"]
 atlas = ExtResource("2_uq4y4")
@@ -51,8 +55,28 @@ region = Rect2(41, 108, 41, 36)
 atlas = ExtResource("2_uq4y4")
 region = Rect2(82, 108, 41, 36)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsh0d"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(0, 36, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkavd"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(41, 36, 41, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmpbe"]
+atlas = ExtResource("2_uq4y4")
+region = Rect2(82, 36, 41, 36)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jdw88"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmh42")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oixoq")
@@ -94,9 +118,18 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsh0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkavd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmpbe")
+}],
 "loop": true,
-"name": &"new_animation",
+"name": &"new_animation_1",
 "speed": 5.0
 }]
 
@@ -104,7 +137,10 @@ animations = [{
 script = ExtResource("1_ew2t8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(2.20122, 2.33333)
 sprite_frames = SubResource("SpriteFrames_jdw88")
-animation = &"new_animation"
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]

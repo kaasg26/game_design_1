@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://e167uqqbl1i6"]
+
+[ext_resource type="Script" path="res://Games/Marrow/mar_enemy_group.gd" id="1_pbcng"]
+[ext_resource type="PackedScene" uid="uid://byochx85io4bn" path="res://Games/Marrow/mar_enemy.tscn" id="2_hi874"]
+
+[node name="mar_enemy_group" type="Node2D"]
+script = ExtResource("1_pbcng")
+
+[node name="mar_enemy" parent="." instance=ExtResource("2_hi874")]
+
+[node name="mar_enemy2" parent="." instance=ExtResource("2_hi874")]

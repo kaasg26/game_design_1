@@ -1,74 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3ih4hc7gvavy"]
+[gd_scene load_steps=4 format=3 uid="uid://b3ih4hc7gvavy"]
 
 [ext_resource type="Script" path="res://mar_player.gd" id="1_ew2t8"]
+[ext_resource type="PackedScene" uid="uid://byochx85io4bn" path="res://Games/Marrow/mar_enemy.tscn" id="2_evudy"]
 [ext_resource type="Texture2D" uid="uid://dbfntgmvvqgom" path="res://Assets/Sprites/Marrow/MainGuySpriteSheet.png" id="2_uq4y4"]
-[ext_resource type="Texture2D" uid="uid://did4iehaquedy" path="res://Assets/Sprites/Marrow/BonePoint.png" id="3_1tibm"]
-
-[sub_resource type="Animation" id="Animation_nmsxh"]
-resource_name = "Hurt"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1.03526, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(30, 30, 30, 1), Color(1, 1, 1, 1), Color(30, 30, 30, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_68861"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(30, 30, 30, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xa0i1"]
-_data = {
-"Hurt": SubResource("Animation_nmsxh"),
-"RESET": SubResource("Animation_68861")
-}
 
 [node name="mar_player" type="Node2D"]
 script = ExtResource("1_ew2t8")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -76.0
-offset_top = -99.0
-offset_right = 85.0
-offset_bottom = -61.0
-value = 100.0
+[node name="mar_enemy" parent="." instance=ExtResource("2_evudy")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(30, 30, 30, 1)
-position = Vector2(-1, -1)
-scale = Vector2(1.88567, 2.39583)
+[node name="Sprite2D" parent="mar_enemy" index="0"]
+scale = Vector2(3, 2.911)
 texture = ExtResource("2_uq4y4")
 hframes = 3
 vframes = 4
-frame = 4
+frame = 3
 
-[node name="Focus" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-137, 3)
-scale = Vector2(4.14, 3.68)
-texture = ExtResource("3_1tibm")
+[node name="ProgressBar" parent="mar_enemy" index="2"]
+offset_left = -74.0
+offset_top = -90.0
+offset_right = 64.0
+offset_bottom = -63.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Focus")
-libraries = {
-"": SubResource("AnimationLibrary_xa0i1")
-}
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[editable path="mar_enemy"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://byochx85io4bn"]
+
+[ext_resource type="Texture2D" uid="uid://ci43hic3joa5g" path="res://Assets/Sprites/Marrow/goblins.png" id="1_tocxa"]
+[ext_resource type="Texture2D" uid="uid://did4iehaquedy" path="res://Assets/Sprites/Marrow/BonePoint.png" id="2_qddbr"]
+
+[sub_resource type="Animation" id="Animation_8u44r"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(30, 1, 1, 1), Color(1, 1, 1, 1), Color(30, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e7w6a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atviv"]
+_data = {
+"RESET": SubResource("Animation_e7w6a"),
+"hurt": SubResource("Animation_8u44r")
+}
+
+[node name="mar_enemy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3.00001)
+scale = Vector2(0.505094, 0.489726)
+texture = ExtResource("1_tocxa")
+hframes = 4
+vframes = 2
+frame = 4
+
+[node name="Focus" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-256, -35)
+scale = Vector2(4.45, 3.65)
+texture = ExtResource("2_qddbr")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -64.0
+offset_top = -80.0
+offset_right = 74.0
+offset_bottom = -53.0
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_atviv")
+}

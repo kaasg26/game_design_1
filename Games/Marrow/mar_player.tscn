@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://mar_player.gd" id="1_ew2t8"]
 [ext_resource type="PackedScene" uid="uid://byochx85io4bn" path="res://Games/Marrow/mar_enemy.tscn" id="2_evudy"]
-[ext_resource type="Texture2D" uid="uid://dbfntgmvvqgom" path="res://Assets/Sprites/Marrow/MainGuySpriteSheet.png" id="2_uq4y4"]
+[ext_resource type="Texture2D" uid="uid://bv5ildhkpl3wn" path="res://Assets/Sprites/Marrow/Skeleton Warior start-1.png.png" id="3_aw6ej"]
 
 [node name="mar_player" type="Node2D"]
 script = ExtResource("1_ew2t8")
@@ -10,11 +10,12 @@ script = ExtResource("1_ew2t8")
 [node name="mar_enemy" parent="." instance=ExtResource("2_evudy")]
 
 [node name="Sprite2D" parent="mar_enemy" index="0"]
-scale = Vector2(3, 2.911)
-texture = ExtResource("2_uq4y4")
-hframes = 3
-vframes = 4
-frame = 3
+position = Vector2(-3.8147e-06, 7)
+scale = Vector2(0.733333, 0.858667)
+texture = ExtResource("3_aw6ej")
+hframes = 1
+vframes = 1
+frame = 0
 
 [node name="ProgressBar" parent="mar_enemy" index="2"]
 offset_left = -74.0

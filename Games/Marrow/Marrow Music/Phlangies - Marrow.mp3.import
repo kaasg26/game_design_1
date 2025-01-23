@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1ec13v0yueur"
+path="res://.godot/imported/Phlangies - Marrow.mp3-02e48acdecb4ec19d7967f8eff466f18.mp3str"
+
+[deps]
+
+source_file="res://Games/Marrow/Marrow Music/Phlangies - Marrow.mp3"
+dest_files=["res://.godot/imported/Phlangies - Marrow.mp3-02e48acdecb4ec19d7967f8eff466f18.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

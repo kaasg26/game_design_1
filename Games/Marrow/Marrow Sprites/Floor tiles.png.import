@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbfntgmvvqgom"
-path="res://.godot/imported/MainGuySpriteSheet.png-9882ead48239ad6efba2c7ad2b349aa0.ctex"
+uid="uid://devbkhbqyg5q"
+path="res://.godot/imported/Floor tiles.png-52ded7b2cbca57a023de484835f854ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Marrow/MainGuySpriteSheet.png"
-dest_files=["res://.godot/imported/MainGuySpriteSheet.png-9882ead48239ad6efba2c7ad2b349aa0.ctex"]
+source_file="res://Games/Marrow/Marrow Sprites/Floor tiles.png"
+dest_files=["res://.godot/imported/Floor tiles.png-52ded7b2cbca57a023de484835f854ed.ctex"]
 
 [params]
 

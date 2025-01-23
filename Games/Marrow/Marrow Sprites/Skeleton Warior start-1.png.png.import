@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://did4iehaquedy"
-path="res://.godot/imported/BonePoint.png-d0574d342d5b5f573cab06449c5e9c31.ctex"
+uid="uid://bv5ildhkpl3wn"
+path="res://.godot/imported/Skeleton Warior start-1.png.png-95d933bb5e67d5d0859d4f7a629503b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Marrow/BonePoint.png"
-dest_files=["res://.godot/imported/BonePoint.png-d0574d342d5b5f573cab06449c5e9c31.ctex"]
+source_file="res://Games/Marrow/Marrow Sprites/Skeleton Warior start-1.png.png"
+dest_files=["res://.godot/imported/Skeleton Warior start-1.png.png-95d933bb5e67d5d0859d4f7a629503b6.ctex"]
 
 [params]
 

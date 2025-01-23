@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbok2s6k2pr4i"
+path="res://.godot/imported/Ribs - Marrow.mp3-4817b34565c4903b7b6d7514317791f3.mp3str"
+
+[deps]
+
+source_file="res://Games/Marrow/Marrow Music/Ribs - Marrow.mp3"
+dest_files=["res://.godot/imported/Ribs - Marrow.mp3-4817b34565c4903b7b6d7514317791f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

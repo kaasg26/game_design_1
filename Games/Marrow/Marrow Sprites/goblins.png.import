@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://devbkhbqyg5q"
-path="res://.godot/imported/Floor tiles.png-bdf60bf09bf7dbbbfdb21f74f2e7bb05.ctex"
+uid="uid://ci43hic3joa5g"
+path="res://.godot/imported/goblins.png-7e5d08e76a1caa4f6765d1d64b50f77e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Marrow/Floor tiles.png"
-dest_files=["res://.godot/imported/Floor tiles.png-bdf60bf09bf7dbbbfdb21f74f2e7bb05.ctex"]
+source_file="res://Games/Marrow/Marrow Sprites/goblins.png"
+dest_files=["res://.godot/imported/goblins.png-7e5d08e76a1caa4f6765d1d64b50f77e.ctex"]
 
 [params]
 

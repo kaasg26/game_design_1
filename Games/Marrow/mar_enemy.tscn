@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://byochx85io4bn"]
+[gd_scene load_steps=7 format=3 uid="uid://byochx85io4bn"]
 
-[ext_resource type="Texture2D" uid="uid://ci43hic3joa5g" path="res://Assets/Sprites/Marrow/goblins.png" id="1_tocxa"]
-[ext_resource type="Texture2D" uid="uid://did4iehaquedy" path="res://Assets/Sprites/Marrow/BonePoint.png" id="2_qddbr"]
+[ext_resource type="Script" path="res://Games/Marrow/mar_enemy.gd" id="1_d0iho"]
+[ext_resource type="Texture2D" uid="uid://ci43hic3joa5g" path="res://Games/Marrow/Marrow Sprites/goblins.png" id="1_tocxa"]
+[ext_resource type="Texture2D" uid="uid://did4iehaquedy" path="res://Games/Marrow/Marrow Sprites/BonePoint.png" id="2_qddbr"]
 
 [sub_resource type="Animation" id="Animation_e7w6a"]
 length = 0.001
@@ -40,6 +41,7 @@ _data = {
 }
 
 [node name="mar_enemy" type="Node2D"]
+script = ExtResource("1_d0iho")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 3.00001)
@@ -51,8 +53,9 @@ frame = 4
 
 [node name="Focus" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-256, -35)
-scale = Vector2(4.45, 3.65)
+position = Vector2(125, 12)
+rotation = 3.13273
+scale = Vector2(2.13117, 1.97382)
 texture = ExtResource("2_qddbr")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
